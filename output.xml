@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-09-04T17:09:45.817828" rpa="false" schemaversion="5">
+<suite id="s1" name="Testsuites" source="C:\Users\ITA-40138\Documents\Robot Framework\testsuites">
+<suite id="s1-s1" name="Fe Sign Up" source="C:\Users\ITA-40138\Documents\Robot Framework\testsuites\fe_sign_up.robot">
+<test id="s1-s1-t1" name="Test Scenario 1: Sign Up with New Credentials" line="7">
+<kw name="Launch Testing Website" owner="setup-teardown" type="SETUP">
+<kw name="Main Setup" owner="setup-teardown">
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-09-04T17:09:45.986542" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-09-04T17:09:45.987542" level="INFO" html="true">Emptied directory '&lt;a href="file://C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots&lt;/a&gt;'.</msg>
+<arg>testsuites/screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-09-04T17:09:45.986542" elapsed="0.001000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>testsuites/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-09-04T17:09:45.987542" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:45.987542" level="INFO">Opening browser 'Google Chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<arg>${url}</arg>
+<arg>Google Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-04T17:09:45.987542" elapsed="6.965661"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-04T17:09:52.954187" elapsed="0.071119"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2024-09-04T17:09:45.985542" elapsed="7.039764"/>
+</kw>
+<arg>${website_url}</arg>
+<status status="PASS" start="2024-09-04T17:09:45.985542" elapsed="7.039764"/>
+</kw>
+<kw name="Given I landed in the website" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:53.064355" level="INFO">Element 'css:header#header' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.029984" elapsed="0.034371"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.028978" elapsed="0.035377"/>
+</kw>
+<arg>${nav_main}</arg>
+<status status="PASS" start="2024-09-04T17:09:53.026304" elapsed="0.039563"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:09:53.026304" elapsed="0.039563"/>
+</kw>
+<kw name="And I navigated to the SignUp form" owner="fe_sign_in_keywords">
+<kw name="Click Specific Element" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:53.068888" level="INFO">Clicking element 'css:div.shop-menu li:nth-child(4)'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.068888" elapsed="0.774774"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.067889" elapsed="0.775866"/>
+</kw>
+<arg>${signup_nav_button}</arg>
+<status status="PASS" start="2024-09-04T17:09:53.067889" elapsed="0.775866"/>
+</kw>
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:53.875386" level="INFO">Element 'css:#form div.row' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.845785" elapsed="0.029601"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.844765" elapsed="0.030621"/>
+</kw>
+<arg>${signup_page}</arg>
+<status status="PASS" start="2024-09-04T17:09:53.843755" elapsed="0.031631"/>
+</kw>
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:53.995011" level="INFO">Element 'css:div.signup-form' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.877457" elapsed="0.117554"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.877457" elapsed="0.118551"/>
+</kw>
+<arg>${signup_form}</arg>
+<status status="PASS" start="2024-09-04T17:09:53.876456" elapsed="0.119552"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:09:53.066889" elapsed="0.929119"/>
+</kw>
+<kw name="And I enter a username" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:54.028025" level="INFO">Element 'css:div.signup-form input[data-qa=signup-name]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.999191" elapsed="0.028834"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:53.998171" elapsed="0.029854"/>
+</kw>
+<arg>${signup_name}</arg>
+<status status="PASS" start="2024-09-04T17:09:53.998171" elapsed="0.029854"/>
+</kw>
+<kw name="Type A Specific Text" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:54.031293" level="INFO">Typing text 'John Doe' into text field 'css:div.signup-form input[data-qa=signup-name]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.031293" elapsed="0.137557"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.030081" elapsed="0.138769"/>
+</kw>
+<arg>${signup_name}</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2024-09-04T17:09:54.029073" elapsed="0.140796"/>
+</kw>
+<arg>${sample_username}</arg>
+<status status="PASS" start="2024-09-04T17:09:53.997134" elapsed="0.172735"/>
+</kw>
+<kw name="And I enter an email" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:54.205337" level="INFO">Element 'css:div.signup-form input[data-qa=signup-email]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.172924" elapsed="0.032413"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.172924" elapsed="0.032413"/>
+</kw>
+<arg>${signup_email}</arg>
+<status status="PASS" start="2024-09-04T17:09:54.171914" elapsed="0.033423"/>
+</kw>
+<kw name="Type A Specific Text" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:54.208488" level="INFO">Typing text 'test@qaenr.com' into text field 'css:div.signup-form input[data-qa=signup-email]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.207474" elapsed="0.201213"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.207474" elapsed="0.201213"/>
+</kw>
+<arg>${signup_email}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2024-09-04T17:09:54.206455" elapsed="0.203330"/>
+</kw>
+<arg>${sample_email}</arg>
+<status status="PASS" start="2024-09-04T17:09:54.170888" elapsed="0.238897"/>
+</kw>
+<kw name="When I click the Signup button" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:54.462727" level="INFO">Element 'css:div.signup-form button[data-qa=signup-button]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.412706" elapsed="0.050021"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.411769" elapsed="0.050958"/>
+</kw>
+<arg>${signup_button}</arg>
+<status status="PASS" start="2024-09-04T17:09:54.411769" elapsed="0.050958"/>
+</kw>
+<kw name="Click Specific Element" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:54.464859" level="INFO">Clicking element 'css:div.signup-form button[data-qa=signup-button]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.464859" elapsed="0.863189"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:54.463838" elapsed="0.864210"/>
+</kw>
+<arg>${signup_button}</arg>
+<status status="PASS" start="2024-09-04T17:09:54.462727" elapsed="0.865321"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:09:54.410691" elapsed="0.917357"/>
+</kw>
+<kw name="Then I should be redirected to the" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:55.371184" level="INFO">Element 'css:div.login-form' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:09:55.331212" elapsed="0.039972"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:09:55.331212" elapsed="0.041187"/>
+</kw>
+<arg>${locator}</arg>
+<status status="PASS" start="2024-09-04T17:09:55.330204" elapsed="0.042195"/>
+</kw>
+<arg>${login_form}</arg>
+<status status="PASS" start="2024-09-04T17:09:55.329124" elapsed="0.043275"/>
+</kw>
+<kw name="Main Teardown" owner="setup-teardown" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:09:55.656175" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-04T17:09:55.374693" elapsed="0.282486"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-04T17:09:55.657179" elapsed="6.450424"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:09:55.373422" elapsed="6.734181"/>
+</kw>
+<tag>REGISTER</tag>
+<status status="PASS" start="2024-09-04T17:09:45.984546" elapsed="16.124057"/>
+</test>
+<test id="s1-s1-t2" name="Test Scenario 2: Sign up with Existing Credentials" line="16">
+<kw name="Launch Testing Website" owner="setup-teardown" type="SETUP">
+<kw name="Main Setup" owner="setup-teardown">
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-09-04T17:10:02.113602" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-09-04T17:10:02.115847" level="INFO" html="true">Emptied directory '&lt;a href="file://C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots&lt;/a&gt;'.</msg>
+<arg>testsuites/screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-09-04T17:10:02.113602" elapsed="0.002245"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>testsuites/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-09-04T17:10:02.116847" elapsed="0.001000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:02.117847" level="INFO">Opening browser 'Google Chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<arg>${url}</arg>
+<arg>Google Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-04T17:10:02.117847" elapsed="7.384798"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-04T17:10:09.503651" elapsed="0.046165"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2024-09-04T17:10:02.112603" elapsed="7.437213"/>
+</kw>
+<arg>${website_url}</arg>
+<status status="PASS" start="2024-09-04T17:10:02.111602" elapsed="7.438214"/>
+</kw>
+<kw name="Given I landed in the website" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:09.591262" level="INFO">Element 'css:header#header' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:09.552820" elapsed="0.038442"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:09.552820" elapsed="0.038442"/>
+</kw>
+<arg>${nav_main}</arg>
+<status status="PASS" start="2024-09-04T17:10:09.551816" elapsed="0.040445"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:09.551816" elapsed="0.040445"/>
+</kw>
+<kw name="And I navigated to the SignUp form" owner="fe_sign_in_keywords">
+<kw name="Click Specific Element" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:09.596261" level="INFO">Clicking element 'css:div.shop-menu li:nth-child(4)'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:09.596261" elapsed="0.720445"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:09.595261" elapsed="0.721445"/>
+</kw>
+<arg>${signup_nav_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:09.594260" elapsed="0.723471"/>
+</kw>
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:10.349282" level="INFO">Element 'css:#form div.row' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.318899" elapsed="0.030383"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.317891" elapsed="0.031391"/>
+</kw>
+<arg>${signup_page}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.317891" elapsed="0.032483"/>
+</kw>
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:10.369765" level="INFO">Element 'css:div.signup-form' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.351467" elapsed="0.018298"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.350374" elapsed="0.019391"/>
+</kw>
+<arg>${signup_form}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.350374" elapsed="0.020478"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:09.593261" elapsed="0.777591"/>
+</kw>
+<kw name="And I enter a username" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:10.417277" level="INFO">Element 'css:div.signup-form input[data-qa=signup-name]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.373852" elapsed="0.043425"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.372767" elapsed="0.044510"/>
+</kw>
+<arg>${signup_name}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.372767" elapsed="0.044510"/>
+</kw>
+<kw name="Type A Specific Text" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:10.420787" level="INFO">Typing text 'John Doe' into text field 'css:div.signup-form input[data-qa=signup-name]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.420277" elapsed="0.185873"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.418278" elapsed="0.187872"/>
+</kw>
+<arg>${signup_name}</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.417277" elapsed="0.189919"/>
+</kw>
+<arg>${sample_username}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.371765" elapsed="0.235431"/>
+</kw>
+<kw name="And I enter an email" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:10.633419" level="INFO">Element 'css:div.signup-form input[data-qa=signup-email]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.609603" elapsed="0.023816"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.608604" elapsed="0.024815"/>
+</kw>
+<arg>${signup_email}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.608604" elapsed="0.024815"/>
+</kw>
+<kw name="Type A Specific Text" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:10.636412" level="INFO">Typing text 'sample@gmail.com' into text field 'css:div.signup-form input[data-qa=signup-email]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.636412" elapsed="0.161346"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.635424" elapsed="0.163360"/>
+</kw>
+<arg>${signup_email}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.634399" elapsed="0.164385"/>
+</kw>
+<arg>sample@gmail.com</arg>
+<status status="PASS" start="2024-09-04T17:10:10.607196" elapsed="0.191588"/>
+</kw>
+<kw name="When I click the Signup button" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:10.825319" level="INFO">Element 'css:div.signup-form button[data-qa=signup-button]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.800897" elapsed="0.024422"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.800897" elapsed="0.024422"/>
+</kw>
+<arg>${signup_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.799844" elapsed="0.026486"/>
+</kw>
+<kw name="Click Specific Element" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:10.829331" level="INFO">Clicking element 'css:div.signup-form button[data-qa=signup-button]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.828329" elapsed="1.206560"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:10.827329" elapsed="1.208644"/>
+</kw>
+<arg>${signup_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:10.826330" elapsed="1.209643"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:10.799844" elapsed="1.236129"/>
+</kw>
+<kw name="Then An error message should display" owner="fe_sign_in_keywords">
+<kw name="Verify If Text Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:12.060857" level="INFO">Current page contains text 'Email Address already exist!'.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-09-04T17:10:12.039172" elapsed="0.021685"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Page Should Contain</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:12.037898" elapsed="0.023965"/>
+</kw>
+<arg>${message}</arg>
+<status status="PASS" start="2024-09-04T17:10:12.037898" elapsed="0.023965"/>
+</kw>
+<arg>${already_exist}</arg>
+<status status="PASS" start="2024-09-04T17:10:12.036901" elapsed="0.024962"/>
+</kw>
+<kw name="Main Teardown" owner="setup-teardown" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:12.215620" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-04T17:10:12.063857" elapsed="0.151763"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-04T17:10:12.216611" elapsed="6.452216"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:12.062857" elapsed="6.607242"/>
+</kw>
+<tag>EXISTING</tag>
+<status status="PASS" start="2024-09-04T17:10:02.110602" elapsed="16.559497"/>
+</test>
+<test id="s1-s1-t3" name="Test Scenario 3: Empty username" line="25">
+<kw name="Launch Testing Website" owner="setup-teardown" type="SETUP">
+<kw name="Main Setup" owner="setup-teardown">
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-09-04T17:10:18.676120" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-09-04T17:10:18.678114" level="INFO" html="true">Emptied directory '&lt;a href="file://C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots&lt;/a&gt;'.</msg>
+<arg>testsuites/screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-09-04T17:10:18.675121" elapsed="0.002993"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>testsuites/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-09-04T17:10:18.678114" elapsed="0.001000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:18.680113" level="INFO">Opening browser 'Google Chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<arg>${url}</arg>
+<arg>Google Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-04T17:10:18.680113" elapsed="7.516283"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-04T17:10:26.197493" elapsed="0.037323"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2024-09-04T17:10:18.675121" elapsed="7.560692"/>
+</kw>
+<arg>${website_url}</arg>
+<status status="PASS" start="2024-09-04T17:10:18.674119" elapsed="7.561694"/>
+</kw>
+<kw name="Given I landed in the website" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:26.272584" level="INFO">Element 'css:header#header' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:26.236813" elapsed="0.035771"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:26.236813" elapsed="0.036801"/>
+</kw>
+<arg>${nav_main}</arg>
+<status status="PASS" start="2024-09-04T17:10:26.236813" elapsed="0.036801"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:26.235813" elapsed="0.037801"/>
+</kw>
+<kw name="And I navigated to the SignUp form" owner="fe_sign_in_keywords">
+<kw name="Click Specific Element" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:26.277844" level="INFO">Clicking element 'css:div.shop-menu li:nth-child(4)'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:26.277844" elapsed="1.105863"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:26.276816" elapsed="1.106891"/>
+</kw>
+<arg>${signup_nav_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:26.275645" elapsed="1.108062"/>
+</kw>
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:27.420282" level="INFO">Element 'css:#form div.row' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.385719" elapsed="0.034563"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.385719" elapsed="0.035562"/>
+</kw>
+<arg>${signup_page}</arg>
+<status status="PASS" start="2024-09-04T17:10:27.384712" elapsed="0.036569"/>
+</kw>
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:27.532026" level="INFO">Element 'css:div.signup-form' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.422282" elapsed="0.110764"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.422282" elapsed="0.110764"/>
+</kw>
+<arg>${signup_form}</arg>
+<status status="PASS" start="2024-09-04T17:10:27.421281" elapsed="0.111765"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:26.274623" elapsed="1.258423"/>
+</kw>
+<kw name="And I enter an email" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:27.570530" level="INFO">Element 'css:div.signup-form input[data-qa=signup-email]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.537156" elapsed="0.033374"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.535088" elapsed="0.036448"/>
+</kw>
+<arg>${signup_email}</arg>
+<status status="PASS" start="2024-09-04T17:10:27.534069" elapsed="0.037467"/>
+</kw>
+<kw name="Type A Specific Text" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:27.574535" level="INFO">Typing text 'sample@gmail.com' into text field 'css:div.signup-form input[data-qa=signup-email]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.573536" elapsed="0.205857"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.572540" elapsed="0.207970"/>
+</kw>
+<arg>${signup_email}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2024-09-04T17:10:27.571536" elapsed="0.208974"/>
+</kw>
+<arg>sample@gmail.com</arg>
+<status status="PASS" start="2024-09-04T17:10:27.534069" elapsed="0.246441"/>
+</kw>
+<kw name="When I click the Signup button" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:27.850449" level="INFO">Element 'css:div.signup-form button[data-qa=signup-button]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.783524" elapsed="0.066925"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.782524" elapsed="0.067925"/>
+</kw>
+<arg>${signup_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:27.781525" elapsed="0.068924"/>
+</kw>
+<kw name="Click Specific Element" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:27.852448" level="INFO">Clicking element 'css:div.signup-form button[data-qa=signup-button]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.852448" elapsed="0.123129"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.851449" elapsed="0.124128"/>
+</kw>
+<arg>${signup_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:27.851449" elapsed="0.124128"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:27.781525" elapsed="0.194052"/>
+</kw>
+<kw name="Then A required error message should display" owner="fe_sign_in_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:27.979257" level="INFO">Executing JavaScript:
+return document.querySelector("div.signup-form input[data-qa=signup-name]").validationMessage
+Without any arguments.</msg>
+<msg time="2024-09-04T17:10:27.990999" level="INFO">${error_message} = Please fill out this field.</msg>
+<var>${error_message}</var>
+<arg>return document.querySelector("${locator}").validationMessage</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.978240" elapsed="0.012759"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${error_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.991996" elapsed="0.000000"/>
+</kw>
+<arg>${should_be_filled_out}</arg>
+<arg>${signup_name1}</arg>
+<status status="PASS" start="2024-09-04T17:10:27.978240" elapsed="0.013756"/>
+</kw>
+<kw name="Main Teardown" owner="setup-teardown" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:28.326445" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-04T17:10:27.993522" elapsed="0.332923"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-04T17:10:28.327464" elapsed="6.453441"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:27.993522" elapsed="6.788397"/>
+</kw>
+<tag>NEGATIVE</tag>
+<tag>USERNAME</tag>
+<status status="PASS" start="2024-09-04T17:10:18.673107" elapsed="16.108812"/>
+</test>
+<test id="s1-s1-t4" name="Test Scenario 4: Invalid Email" line="34">
+<kw name="Launch Testing Website" owner="setup-teardown" type="SETUP">
+<kw name="Main Setup" owner="setup-teardown">
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-09-04T17:10:34.787043" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-09-04T17:10:34.789051" level="INFO" html="true">Emptied directory '&lt;a href="file://C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots"&gt;C:\Users\ITA-40138\Documents\Robot Framework\testsuites\screenshots&lt;/a&gt;'.</msg>
+<arg>testsuites/screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-09-04T17:10:34.785923" elapsed="0.003128"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>testsuites/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-09-04T17:10:34.789051" elapsed="0.000999"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:34.790050" level="INFO">Opening browser 'Google Chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<arg>${url}</arg>
+<arg>Google Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-04T17:10:34.790050" elapsed="7.454765"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-04T17:10:42.244815" elapsed="0.052563"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2024-09-04T17:10:34.784917" elapsed="7.512461"/>
+</kw>
+<arg>${website_url}</arg>
+<status status="PASS" start="2024-09-04T17:10:34.784917" elapsed="7.512461"/>
+</kw>
+<kw name="Given I landed in the website" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:42.335661" level="INFO">Element 'css:header#header' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:42.300744" elapsed="0.034917"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:42.300744" elapsed="0.034917"/>
+</kw>
+<arg>${nav_main}</arg>
+<status status="PASS" start="2024-09-04T17:10:42.299730" elapsed="0.035931"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:42.299730" elapsed="0.036930"/>
+</kw>
+<kw name="And I navigated to the SignUp form" owner="fe_sign_in_keywords">
+<kw name="Click Specific Element" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:42.339660" level="INFO">Clicking element 'css:div.shop-menu li:nth-child(4)'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:42.339660" elapsed="0.725753"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:42.338659" elapsed="0.726853"/>
+</kw>
+<arg>${signup_nav_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:42.337659" elapsed="0.727853"/>
+</kw>
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.102311" level="INFO">Element 'css:#form div.row' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.066518" elapsed="0.035793"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.066518" elapsed="0.035793"/>
+</kw>
+<arg>${signup_page}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.065512" elapsed="0.036799"/>
+</kw>
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.163042" level="INFO">Element 'css:div.signup-form' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.104510" elapsed="0.058532"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.103408" elapsed="0.059634"/>
+</kw>
+<arg>${signup_form}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.103408" elapsed="0.059634"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:42.337659" elapsed="0.825383"/>
+</kw>
+<kw name="And I enter a username" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.287025" level="INFO">Element 'css:div.signup-form input[data-qa=signup-name]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.166453" elapsed="0.120572"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.166453" elapsed="0.120572"/>
+</kw>
+<arg>${signup_name}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.165453" elapsed="0.121572"/>
+</kw>
+<kw name="Type A Specific Text" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.289460" level="INFO">Typing text 'John Doe' into text field 'css:div.signup-form input[data-qa=signup-name]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.288455" elapsed="0.190315"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.288455" elapsed="0.190315"/>
+</kw>
+<arg>${signup_name}</arg>
+<arg>${username}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.287025" elapsed="0.191745"/>
+</kw>
+<arg>${sample_username}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.164446" elapsed="0.314324"/>
+</kw>
+<kw name="And I enter an email" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.520216" level="INFO">Element 'css:div.signup-form input[data-qa=signup-email]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.482857" elapsed="0.038360"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.481855" elapsed="0.039362"/>
+</kw>
+<arg>${signup_email}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.480856" elapsed="0.041359"/>
+</kw>
+<kw name="Type A Specific Text" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.525596" level="INFO">Typing text 'samplegmail.com' into text field 'css:div.signup-form input[data-qa=signup-email]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.524597" elapsed="0.163825"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.523591" elapsed="0.164831"/>
+</kw>
+<arg>${signup_email}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.522215" elapsed="0.166207"/>
+</kw>
+<arg>samplegmail.com</arg>
+<status status="PASS" start="2024-09-04T17:10:43.479818" elapsed="0.209604"/>
+</kw>
+<kw name="When I click the Signup button" owner="fe_sign_in_keywords">
+<kw name="Verify If Element Is Existing" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.726086" level="INFO">Element 'css:div.signup-form button[data-qa=signup-button]' is displayed.</msg>
+<arg>${locator}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.691508" elapsed="0.035493"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.691508" elapsed="0.035493"/>
+</kw>
+<arg>${signup_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.690468" elapsed="0.036533"/>
+</kw>
+<kw name="Click Specific Element" owner="global_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.729001" level="INFO">Clicking element 'css:div.signup-form button[data-qa=signup-button]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.729001" elapsed="0.098626"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.728002" elapsed="0.099625"/>
+</kw>
+<arg>${signup_button}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.727001" elapsed="0.100626"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:43.689422" elapsed="0.138205"/>
+</kw>
+<kw name="Then A required error message should display" owner="fe_sign_in_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:43.830641" level="INFO">Executing JavaScript:
+return document.querySelector("div.signup-form input[data-qa=signup-email]").validationMessage
+Without any arguments.</msg>
+<msg time="2024-09-04T17:10:43.843456" level="INFO">${error_message} = Please include an '@' in the email address. 'samplegmail.com' is missing an '@'.</msg>
+<var>${error_message}</var>
+<arg>return document.querySelector("${locator}").validationMessage</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.829632" elapsed="0.014897"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${error_message}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.844529" elapsed="0.000000"/>
+</kw>
+<arg>${missing_char}</arg>
+<arg>${signup_email1}</arg>
+<status status="PASS" start="2024-09-04T17:10:43.828632" elapsed="0.016900"/>
+</kw>
+<kw name="Main Teardown" owner="setup-teardown" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-04T17:10:44.176028" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-04T17:10:43.846544" elapsed="0.329484"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-04T17:10:44.176028" elapsed="6.412458"/>
+</kw>
+<status status="PASS" start="2024-09-04T17:10:43.845532" elapsed="6.742954"/>
+</kw>
+<tag>EMAIL</tag>
+<tag>NEGATIVE</tag>
+<status status="PASS" start="2024-09-04T17:10:34.783913" elapsed="15.806043"/>
+</test>
+<status status="PASS" start="2024-09-04T17:09:45.839284" elapsed="64.752775"/>
+</suite>
+<status status="PASS" start="2024-09-04T17:09:45.818828" elapsed="64.775423"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">EMAIL</stat>
+<stat pass="1" fail="0" skip="0">EXISTING</stat>
+<stat pass="2" fail="0" skip="0">NEGATIVE</stat>
+<stat pass="1" fail="0" skip="0">REGISTER</stat>
+<stat pass="1" fail="0" skip="0">USERNAME</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Testsuites">Testsuites</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="Fe Sign Up">Testsuites.Fe Sign Up</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
