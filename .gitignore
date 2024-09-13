@@ -1,3 +1,5 @@
 output/log.html
 output/output.xml
 output/report.html
+*.html
+*.xml
